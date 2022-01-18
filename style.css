@@ -71,17 +71,19 @@ footer{
     font-size: 0.5rem;
 }
 
-/* Sections */
-
-/* Splash page */
-
-.splash-container{
+.flex-col-container{
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 100%;
 }
+
+/* Sections */
+
+/* Splash page */
+
 .splash-cards{
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
 }

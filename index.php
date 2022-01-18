@@ -9,15 +9,15 @@
     <title>FinSek</title>
 </head>
 <body>
-    <div class="splash-container">
+    <div class="flex-col-container">
         <div class="splash-header">
             <h1><object data="svg/Financial_Document.svg" height="50rem"></object>FinSek</h1>
             <h3>Aplikacija jūsų biudžetui sekti</h3>
         </div>
         <div class="splash-main">
             <h1>Pradėkite naudotis dabar!</h1>
-            <button class="btn"><a href="login.php" class="txt-white">Prisijungti</a></button>
-            <button class="btn-alternate"><a href="register.php" class="txt-accent">Registruotis</a></button>
+            <a href="login.php" class="btn txt-white">Prisijungti</a>
+            <a href="register.php" class="btn-alternate txt-accent">Registruotis</a>
             <div class="splash-cards">
                 <div class="card splash-card">
                     <h3>Patogumas</h3>
