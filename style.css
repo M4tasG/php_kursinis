@@ -71,10 +71,19 @@ footer{
     font-size: 0.5rem;
 }
 
+.txt-center{
+    text-align: center;
+}
+
 .flex-col-container{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    height: 100%;
+}
+
+.flex-row-container{
+    display: flex;
+    flex-direction: row;
     height: 100%;
 }
 
