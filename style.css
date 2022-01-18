@@ -133,3 +133,29 @@ footer{
     background: white;
     color: var(--text-color);
 }
+
+/* Dashboard */
+.sidebar{
+    color: var(--text-color-secondary);
+    background: var(--accent-color);
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-color-secondary) 100%);
+}
+.sidebar-body{
+    text-align: left;
+}
+.sidebar-body a{
+    color: var(--text-color-secondary);
+}
+.sidebar-body h2{
+    display: flex;
+    align-items: center;
+}
+.sidebar h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background: var(--background);
+}
