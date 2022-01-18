@@ -158,4 +158,20 @@ footer{
 
 .main{
     background: var(--background);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.main-row{
+    display: flex;
+    flex-direction: row;
+}
+.linechart{
+    flex: 4;
+}
+.piechart{
+    flex: 2;
+}
+.txtstats{
+    flex: 2;
 }
