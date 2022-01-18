@@ -9,6 +9,10 @@
     <title>FinSek - Login</title>
 </head>
 <body>
-    
+    <div class="flex-col-container">
+        <div class="splash-header">
+            <h1><object data="svg/Financial_Document.svg" height="50rem"></object>FinSek</h1>
+        </div>
+    </div>
 </body>
 </html>
