@@ -9,7 +9,7 @@
     <title>FinSek - Prisijungimas</title>
 </head>
 <body>
-    <div class="flex-col-container">
+    <div class="flex-col-container txt-center">
         <div class="splash-header">
             <h1><object data="svg/Financial_Document.svg" height="50rem"></object>FinSek</h1>
         </div>
