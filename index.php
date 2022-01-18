@@ -9,6 +9,8 @@
     <title>FinSek</title>
 </head>
 <body>
-    Hello World!
+    <div class="container">
+        <h1>FinSek</h1>
+    </div>
 </body>
 </html>
