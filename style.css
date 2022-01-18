@@ -105,3 +105,22 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+/* Form pages */
+.form-container fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+.form-container input{
+    margin: 1rem;
+    padding: 1rem;
+    border: 3px solid var(--accent-color);
+    width: 25%;
+    border-radius: 1rem;
+    background: white;
+    color: var(--text-color);
+}
