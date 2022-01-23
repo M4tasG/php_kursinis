@@ -8,6 +8,7 @@
     --text-color-secondary: #f5f5f5;
     --accent-color: #c900ff;
     --accent-color-secondary: #5100ff;
+    --border-gray: #afafaf;
 }
 
 html, body{
@@ -184,4 +185,39 @@ footer{
 }
 .stats-highlight{
     color: var(--accent-color);
+}
+
+/* List */
+.list{
+    width: 100%;
+}
+.list-top{
+    display: flex;
+    flex-direction: row;
+}
+.list-body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.list-item{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border-gray);
+}
+.list-item p{
+    margin: 0 9.5rem;
+}
+.list-item-name{
+    color:var(--accent-color)
+}
+.list-item-category{
+    color:var(--border-gray)
+}
+.list-item-date{
+    color: var(--border-gray);
+}
+.list-item-amount{
+    color: var(--accent-color-secondary);
 }
