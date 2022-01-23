@@ -31,7 +31,25 @@
             </div>
             <div class="main-row">
                 <div class="card txtstats">
-                    <h2>Text stats</h2>
+                    <h2>Statistics</h2>
+                    <div class="txtstats-wrapper">
+                        <div class="stat">
+                            <h2>Change this month:</h2>
+                            <h2><span class="stats-highlight">+0.00</span></h2>
+                        </div>
+                        <div class="stat">
+                            <h2>Gained:</h2>
+                            <h2><span class="stats-highlight">+0.00</span></h2>
+                        </div>
+                        <div class="stat">
+                            <h2>Spent:</h2>
+                            <h2><span class="stats-highlight">-0.00</span></h2>
+                        </div>
+                        <div class="stat">
+                            <h2>Category mostly spent on:</h2>
+                            <h2><span class="stats-highlight">Utility</span></h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
