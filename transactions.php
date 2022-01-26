@@ -15,6 +15,7 @@
                 <h1><object data="svg/Financial_Document.svg" height="50rem"></object>FinSek</h1>
             </div>
             <div class="sidebar-body">
+                <h2><?php echo "Sveiki, " . $_SESSION['username']; ?></h2>
                 <h2><object data="svg/Certificate.svg" height="45rem"></object><a href="dashboard.php">Pagrindinis</a></h2>
                 <h2><object data="svg/Cash.svg" height="45rem"></object><a href="transactions.php">Pavedimai</a></h2>
                 <h2><object data="svg/Credit_Card.svg" height="45rem"></object><a href="accounts.php">Sąskaitos</a></h2>
