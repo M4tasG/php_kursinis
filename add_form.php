@@ -38,23 +38,23 @@
                                 echo "</select>";
                                 echo "<input required type='date' name='date'>";
                                 echo "<input required type='number' name='amount' step='0.01' placeholder='Amount'>";
-                                echo "<input type='hidden' name='add-transaction'>";
+                                echo "<input type='hidden' name='add_transaction'>";
                             }
                             if(isset($_POST['account'])){
                                 echo "<input required type='number' name='amount' step='0.01' placeholder='Balance'>";
-                                echo "<input type='hidden' name='add-account'>";
+                                echo "<input type='hidden' name='add_account'>";
                             }
                             if(isset($_POST['lend'])){
                                 echo "<input required type='text' name='person' placeholder='Person'>";
                                 echo "<input required type='date' name='date'>";
                                 echo "<input required type='number' name='amount' step='0.01' placeholder='Amount'>";
-                                echo "<input type='hidden' name='add-lend'>";
+                                echo "<input type='hidden' name='add_lend'>";
                             }
                             if(isset($_POST['borrow'])){
                                 echo "<input required type='text' name='person' placeholder='Person'>";
                                 echo "<input required type='date' name='date'>";
                                 echo "<input required type='number' name='amount' step='0.01' placeholder='Amount'>";
-                                echo "<input type='hidden' name='add-borrow'>";
+                                echo "<input type='hidden' name='add_borrow'>";
                             }
                         ?>
                         <input type='submit' name='submit' value='Pridėti'>
