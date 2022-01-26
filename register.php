@@ -15,12 +15,12 @@
         </div>
         <div class="form-container">
             <h1>Registracija</h1>
-            <form method="POST">
+            <form action="register_check.php" method="POST">
                 <fieldset>
-                    <input placeholder="Vartotojo vardas" type="text" name="username" id="username" required>
-                    <input placeholder="Elektroninis paštas" type="text" name="email" id="email" required>
-                    <input placeholder="Slaptažodis" type="password" name="password" id="password" required>
-                    <button type="submit" class="btn txt-white">Registruotis</button>
+                    <input placeholder="Vartotojo vardas" type="text" name="username" required>
+                    <input placeholder="Elektroninis paštas" type="text" name="email" required>
+                    <input placeholder="Slaptažodis" type="password" name="password" required>
+                    <button type="submit" name="submit" class="btn txt-white">Registruotis</button>
                 </fieldset>
                 Jau turite paskyrą? <a href="login.php" class="txt-accent">Prisijungti</a>
             </form>
