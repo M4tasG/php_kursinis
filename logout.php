@@ -1,7 +1,6 @@
 <?php
     session_start();
     session_destroy();
-    $_SESSION['authenticated'] = false;
-    $_SESSION['username'] = "";
+    session_unset();
     header("Location: login.php");
 ?>
