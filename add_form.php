@@ -34,10 +34,10 @@
             <div class="card change-form">
                 <form action="add_db_item.php" method="POST">
                     <fieldset>
-                        <input required type="text" name="name" placeholder="Name">
+                        <input required type="text" name="name" placeholder="Pavadinimas">
                         <?php
                             include 'functions.php';
-                            $categories = ['Entertainment', 'Food', 'Transportation', 'Bills', 'Other'];
+                            $categories = ['Pramogos', 'Maistas', 'Transportas', 'Sąskaitos', 'Kita'];
                             $accounts = fetch_accounts($_SESSION['username']);
                             if(isset($_POST['transaction'])){
                                 echo "<select required name='category'>";
@@ -46,7 +46,7 @@
                                 }
                                 echo "</select>";
                                 echo "<input required type='date' name='date'>";
-                                echo "<input required type='number' name='amount' step='0.01' placeholder='Amount'>";
+                                echo "<input required type='number' name='amount' step='0.01' placeholder='Suma'>";
                                 echo "<select required name='account'>";
                                 foreach($accounts as $account){
                                     echo "<option value='$account'>$account</option>";
@@ -55,7 +55,7 @@
                                 echo "<input type='hidden' name='add_transaction'>";
                             }
                             if(isset($_POST['account'])){
-                                echo "<input required type='number' name='amount' step='0.01' placeholder='Balance'>";
+                                echo "<input required type='number' name='amount' step='0.01' placeholder='Likutis'>";
                                 echo "<input type='hidden' name='add_account'>";
                             }
                             if(isset($_POST['lend'])){
@@ -66,7 +66,7 @@
                                     echo "<option value='$account'>$account</option>";
                                 }
                                 echo "</select>";
-                                echo "<input required type='number' name='amount' step='0.01' placeholder='Amount'>";
+                                echo "<input required type='number' name='amount' step='0.01' placeholder='Suma'>";
                                 echo "<input type='hidden' name='add_l'>";
                             }
                             if(isset($_POST['borrow'])){
@@ -77,7 +77,7 @@
                                     echo "<option value='$account'>$account</option>";
                                 }
                                 echo "</select>";
-                                echo "<input required type='number' name='amount' step='0.01' placeholder='Amount'>";
+                                echo "<input required type='number' name='amount' step='0.01' placeholder='Suma'>";
                                 echo "<input type='hidden' name='add_b'>";
                             }
                         ?>

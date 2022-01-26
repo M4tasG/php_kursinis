@@ -33,16 +33,16 @@
         <div class="main">
             <div class="main-row">
                 <div class="card linechart">
-                    <h2>Linegraph</h2>
+                    <h2>Pokyčio grafikas</h2>
                     <canvas id="line_chart" width="1500px" height="450px"></canvas>
                 </div>    
             </div>
             <div class="main-row">
                 <div class="card txtstats">
-                    <h2>Statistics</h2>
+                    <h2>Statistika</h2>
                     <div class="txtstats-wrapper">
                         <div class="stat">
-                            <h2>Total change:</h2>
+                            <h2>Pokytis:</h2>
                             <h2><span class="stats-highlight">
                                 <?php
                                     include 'functions.php';
@@ -52,7 +52,7 @@
                             </span></h2>
                         </div>
                         <div class="stat">
-                            <h2>Gained:</h2>
+                            <h2>Uždirbta:</h2>
                             <h2><span class="stats-highlight">+
                                 <?php
                                     echo calculate_gain($_SESSION['username']);
@@ -61,7 +61,7 @@
                             </span></h2>
                         </div>
                         <div class="stat">
-                            <h2>Spent:</h2>
+                            <h2>Išleista:</h2>
                             <h2><span class="stats-highlight">
                                 <?php
                                     echo calculate_loss($_SESSION['username']);
