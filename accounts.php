@@ -22,8 +22,8 @@
                 <h2><object data="svg/Certificate.svg" height="45rem"></object><a href="dashboard.php">Pagrindinis</a></h2>
                 <h2><object data="svg/Cash.svg" height="45rem"></object><a href="transactions.php">Pavedimai</a></h2>
                 <h2><object data="svg/Credit_Card.svg" height="45rem"></object><a href="accounts.php">Sąskaitos</a></h2>
-                <h2><object data="svg/Money_Bag.svg" height="45rem"></object><a href="borrows.php">Paskolinimai</a></h2>
-                <h2><object data="svg/Currency.svg" height="45rem"></object><a href="lends.php">Pasiskolinimai</a></h2>
+                <h2><object data="svg/Money_Bag.svg" height="45rem"></object><a href="lends.php">Paskolinimai</a></h2>
+                <h2><object data="svg/Currency.svg" height="45rem"></object><a href="borrows.php">Pasiskolinimai</a></h2>
                 <h2><a href="logout.php">Atsijungti</a></h2>
             </div>
         </div>
