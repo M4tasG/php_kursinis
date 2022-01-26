@@ -11,6 +11,9 @@
 <body>
     <?php
         session_start();
+        if(!$_SESSION['authenticated']){
+            header("Location: login.php");
+        }
     ?>
     <div class="flex-row-container">
         <div class="sidebar">
@@ -39,20 +42,32 @@
                     <h2>Statistics</h2>
                     <div class="txtstats-wrapper">
                         <div class="stat">
-                            <h2>Change this month:</h2>
-                            <h2><span class="stats-highlight">+0.00</span></h2>
+                            <h2>Total change:</h2>
+                            <h2><span class="stats-highlight">
+                                <?php
+                                    include 'functions.php';
+                                    echo calculate_change($_SESSION['username']);
+                                ?>
+                                €</span></h2>
+                            </span></h2>
                         </div>
                         <div class="stat">
                             <h2>Gained:</h2>
-                            <h2><span class="stats-highlight">+0.00</span></h2>
+                            <h2><span class="stats-highlight">+
+                                <?php
+                                    echo calculate_gain($_SESSION['username']);
+                                ?>
+                                €</span></h2>
+                            </span></h2>
                         </div>
                         <div class="stat">
                             <h2>Spent:</h2>
-                            <h2><span class="stats-highlight">-0.00</span></h2>
-                        </div>
-                        <div class="stat">
-                            <h2>Category mostly spent on:</h2>
-                            <h2><span class="stats-highlight">Utility</span></h2>
+                            <h2><span class="stats-highlight">
+                                <?php
+                                    echo calculate_loss($_SESSION['username']);
+                                ?>
+                                €</span></h2>
+                            </span></h2>
                         </div>
                     </div>
                 </div>
@@ -62,6 +77,9 @@
 
     <!-- Importing Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var changeArray = <?php echo json_encode(fetch_transaction_amounts($_SESSION['username'])); ?>;
+    </script>
     <!-- Importing my own js script for generating the charts using Chart.js -->
     <script src="js/line_chart.js"></script>
 </body>
