@@ -15,7 +15,6 @@
         $query = "SELECT * FROM users WHERE username = '$user'";
         $result = $dbconnect->query($query);
         $entry = $result->fetch_assoc();
-        echo $entry['username'];
         return $entry['id'];
     }
     function fetch_account_id($acc, $user){
@@ -23,7 +22,6 @@
         $query = "SELECT * FROM accounts WHERE name = '$acc' AND user = '$user'";
         $result = $dbconnect->query($query);
         $entry = $result->fetch_assoc();
-        echo $entry['name'];
         return $entry['id'];
     }
     function fetch_accounts($user){
@@ -36,5 +34,38 @@
             array_push($accounts, $entry['name']);
         }
         return $accounts;
+    }
+    function fetch_transactions($user){
+        include 'db.php';
+        $user = fetch_user_id($user);
+        $query = "SELECT * FROM transactions WHERE user = '$user'";
+        $result = $dbconnect->query($query);
+        $transactions = array();
+        while($entry = $result->fetch_assoc()){
+            array_push($transactions, $entry['name']);
+        }
+        return $transactions;
+    }
+    function fetch_lends($user){
+        include 'db.php';
+        $user = fetch_user_id($user);
+        $query = "SELECT * FROM lends WHERE user = '$user'";
+        $result = $dbconnect->query($query);
+        $lends = array();
+        while($entry = $result->fetch_assoc()){
+            array_push($lends, $entry['name']);
+        }
+        return $lends;
+    }
+    function fetch_borrows($user){
+        include 'db.php';
+        $user = fetch_user_id($user);
+        $query = "SELECT * FROM borrows WHERE user = '$user'";
+        $result = $dbconnect->query($query);
+        $borrows = array();
+        while($entry = $result->fetch_assoc()){
+            array_push($borrows, $entry['name']);
+        }
+        return $borrows;
     }
 ?>
