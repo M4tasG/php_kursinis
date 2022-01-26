@@ -34,8 +34,9 @@
         $l_amount = $_POST['amount'];
         $l_person = $_POST['person'];
         $l_user = fetch_user_id($_SESSION['username']);
+        $l_date = $_POST['date'];
         $l_account = fetch_account_id($_POST['account'], $l_user);
-        $query = "INSERT INTO lends (`name`, `person`, `amount`, `user`, `account`) VALUES ('$l_name', '$l_person', '$l_amount', '$l_user', '$l_account')";
+        $query = "INSERT INTO lends (`name`, `person`, `date`, `amount`, `user`, `account`) VALUES ('$l_name', '$l_person', '$l_date', '$l_amount', '$l_user', '$l_account')";
         $dbconnect -> query($query);
         $query = "SELECT * FROM accounts WHERE id = '$l_account'";
         $result = $dbconnect -> query($query);
@@ -51,8 +52,9 @@
         $l_amount = $_POST['amount'];
         $l_person = $_POST['person'];
         $l_user = fetch_user_id($_SESSION['username']);
+        $l_date = $_POST['date'];
         $l_account = fetch_account_id($_POST['account'], $l_user);
-        $query = "INSERT INTO borrows (`name`, `person`, `amount`, `user`, `account`) VALUES ('$l_name', '$l_person', '$l_amount', '$l_user', '$l_account')";
+        $query = "INSERT INTO borrows (`name`, `person`, `date`, `amount`, `user`, `account`) VALUES ('$l_name', '$l_person', '$l_date', '$l_amount', '$l_user', '$l_account')";
         $dbconnect -> query($query);
         $query = "SELECT * FROM accounts WHERE id = '$l_account'";
         $result = $dbconnect -> query($query);
