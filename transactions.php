@@ -9,6 +9,9 @@
     <title>FinSek - Pagrindinis</title>
 </head>
 <body>
+    <?php
+        session_start();
+    ?>
     <div class="flex-row-container">
         <div class="sidebar">
             <div class="sidebar-header">
