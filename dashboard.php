@@ -20,6 +20,7 @@
                 <h2><object data="svg/Credit_Card.svg" height="45rem"></object><a href="accounts.php">Sąskaitos</a></h2>
                 <h2><object data="svg/Money_Bag.svg" height="45rem"></object><a href="borrows.php">Paskolinimai</a></h2>
                 <h2><object data="svg/Currency.svg" height="45rem"></object><a href="lends.php">Pasiskolinimai</a></h2>
+                <h2><a href="logout.php.php">Atsijungti</a></h2>
             </div>
         </div>
         <div class="main">
