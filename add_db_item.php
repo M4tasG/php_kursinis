@@ -15,13 +15,15 @@
         }
     }
     if(isset($_POST['add_account'])){
+        echo "Adding account";
         $a_name = $_POST['name'];
         $a_amount = $_POST['amount'];
         $a_user = $_SESSION['username'];
         $query = "SELECT * FROM users WHERE username = '$a_user'";
         $result = $dbconnect -> query($query);
         $entry = $result->fetch_assoc();
-        $query = "INSERT INTO accounts (`name`, `amount`, `user`) VALUES ('$a_name', '$a_amount', '$entry['id']')";
+        $a_user = $entry['id'];
+        $query = "INSERT INTO accounts (`name`, `balance`, `user`) VALUES ('$a_name', '$a_amount', '$a_user')";
         if(!$dbconnect -> query($query)){
             echo "<div class='change-message error'>Error: " . $dbconnect -> error . "</div>";
         }
