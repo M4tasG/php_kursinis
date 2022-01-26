@@ -24,42 +24,8 @@
             </div>
         </div>
         <div class="main">
-            <div>
-                <?php
-                    $hostname = "localhost";
-                    $username = "admin";
-                    $password = "admin";
-                    $dbname = "kursinis";
-                    $dbconnect = new mysqli($hostname, $username, $password, $dbname);
-                    if(isset($_POST['add_transaction'])){
-                        $t_name = $_POST['name'];
-                        $t_category = $_POST['category'];
-                        $t_date = $_POST['date'];
-                        $t_amount = $_POST['amount'];
-                        $query = "INSERT INTO transactions (`name`, `category`, `date`, `amount`) VALUES ('$t_name', '$t_category', '$t_date', '$t_amount')";
-                        if(!$dbconnect -> query($query)){
-                            echo "<div class='change-message error'>Error: " . $dbconnect -> error . "</div>";
-                        }
-                        else{
-                            echo "<div class='change-message success'>Transaction added successfully</div>";
-                        }
-                    }
-                    if(isset($_POST['add_account'])){
-                        $a_name = $_POST['name'];
-                        $a_amount = $_POST['amount'];
-                        $a_user = 
-                        $query = "INSERT INTO accounts (`name`, `amount`) VALUES ('$a_name', '$a_amount')";
-                        if(!$dbconnect -> query($query)){
-                            echo "<div class='change-message error'>Error: " . $dbconnect -> error . "</div>";
-                        }
-                        else{
-                            echo "<div class='change-message success'>Account added successfully</div>";
-                        }
-                    }
-                ?>
-            </div>
             <div class="card change-form">
-                <form action="add_form.php" method="POST">
+                <form action="add_db_item.php" method="POST">
                     <fieldset>
                         <input required type="text" name="name" placeholder="Name">
                         <?php
