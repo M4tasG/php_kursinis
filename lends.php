@@ -37,6 +37,23 @@
                         <button class="btn-alternate" name="lend">Ištrinti</button>
                     </form>
                 </div>
+                <?php
+                    include 'db.php';
+                    include 'functions.php';
+                    $user_id = fetch_user_id($_SESSION['username']);
+                    $query = "SELECT * FROM lends WHERE user = '$user_id'";
+                    $result = $dbconnect->query($query);
+                    while($row = $result->fetch_assoc()){
+                        echo "<div class='list-body'>";
+                        echo "<div class='list-item'>";
+                        echo "<p class='list-item-name'>".$row['name']."</p>";
+                        echo "<p class='list-item-category'>".$row['person']."</p>";
+                        echo "<p class='list-item-date'>".$row['date']."</p>";
+                        echo "<p class='list-item-amount'>".$row['amount']."</p>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                ?>
                 <div class="list-body">
                     <div class="list-item">
                         <p class="list-item-name">Transaction Name</p>
