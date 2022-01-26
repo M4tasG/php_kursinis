@@ -15,11 +15,11 @@
         </div>
         <div class="form-container">
             <h1>Prisijungimas</h1>
-            <form method="POST">
+            <form action="login_check.php" method="POST">
                 <fieldset>
-                    <input placeholder="Vartotojo vardas" type="text" name="username" id="username" required>
-                    <input placeholder="Slaptažodis" type="password" name="password" id="password" required>
-                    <button type="submit" class="btn txt-white">Prisijungti</button>
+                    <input placeholder="Vartotojo vardas" type="text" name="username" required>
+                    <input placeholder="Slaptažodis" type="password" name="password" required>
+                    <button type="submit" name="submit" class="btn txt-white">Prisijungti</button>
                 </fieldset>
                 Neturite paskyros? <a href="register.php" class="txt-accent">Registruotis</a>
             </form>
