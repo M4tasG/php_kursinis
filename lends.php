@@ -54,14 +54,6 @@
                         echo "</div>";
                     }
                 ?>
-                <div class="list-body">
-                    <div class="list-item">
-                        <p class="list-item-name">Transaction Name</p>
-                        <p class="list-item-category">Lended to</p>
-                        <p class="list-item-date">Date</p>
-                        <p class="list-item-amount">0.00</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
