@@ -42,6 +42,12 @@
             return $clean_credentials;
         }
     }
+    function validate_login_creds($username){
+        if(filter_var($username, FILTER_SANITIZE_STRING)){
+            $clean_credentials = $username;
+            return $clean_credentials;
+        }
+    }
     function fetch_user_id($user){
         include 'db.php';
         $query = "SELECT * FROM users WHERE username = '$user'";
