@@ -20,14 +20,18 @@
                 <h2><object data="svg/Credit_Card.svg" height="45rem"></object><a href="accounts.php">Sąskaitos</a></h2>
                 <h2><object data="svg/Money_Bag.svg" height="45rem"></object><a href="borrows.php">Paskolinimai</a></h2>
                 <h2><object data="svg/Currency.svg" height="45rem"></object><a href="lends.php">Pasiskolinimai</a></h2>
-                <h2><a href="logout.php.php">Atsijungti</a></h2>
+                <h2><a href="logout.php">Atsijungti</a></h2>
             </div>
         </div>
         <div class="main">
             <div class="card list">
                 <div class="list-top">
-                    <a href="#" class="btn-alternate">Pridėti</a>
-                    <a href="#" class="btn-alternate">Ištrinti</a>
+                    <form method="POST" action="add_form.php">
+                        <button class="btn-alternate" name="account">Pridėti</button>
+                    </form>
+                    <form method="POST" action="delete_form.php">
+                        <button class="btn-alternate" name="account">Ištrinti</button>
+                    </form>
                 </div>
                 <div class="list-body">
                     <div class="list-item">
