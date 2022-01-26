@@ -11,6 +11,9 @@
 <body>
     <?php
         session_start();
+        if(!$_SESSION['authenticated']){
+            header("Location: login.php");
+        }
     ?>
     <div class="flex-row-container">
         <div class="sidebar">
