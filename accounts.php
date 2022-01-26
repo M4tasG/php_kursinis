@@ -9,6 +9,9 @@
     <title>FinSek - Pagrindinis</title>
 </head>
 <body>
+    <?php
+        session_start();
+    ?>
     <div class="flex-row-container">
         <div class="sidebar">
             <div class="sidebar-header">
@@ -34,12 +37,24 @@
                         <button class="btn-alternate" name="account">Ištrinti</button>
                     </form>
                 </div>
-                <div class="list-body">
-                    <div class="list-item">
-                        <p class="list-item-name">Account name</p>
-                        <p class="list-item-amount">0.00</p>
-                    </div>
-                </div>
+                <?php
+                    include 'db.php';
+                    $user_id = $_SESSION['username'];
+                    $query = "SELECT * FROM users WHERE username = '$user_id'";
+                    $result = $dbconnect->query($query);
+                    $user = $result -> fetch_assoc();
+                    $user_id = $user['id'];
+                    $query = "SELECT * FROM accounts WHERE user = '$user_id'";
+                    $result = $dbconnect->query($query);
+                    while($row = $result->fetch_assoc()){
+                        echo "<div class='list-body'>";
+                        echo "<div class='list-item'>";
+                        echo "<p class='list-item-name'>".$row['name']."</p>";
+                        echo "<p class='list-item-amount'>".$row['balance']."</p>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                ?>
             </div>
         </div>
     </div>
