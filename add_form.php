@@ -9,6 +9,9 @@
     <title>FinSek - Pagrindinis</title>
 </head>
 <body>
+    <?php
+        session_start();
+    ?>
     <div class="flex-row-container">
         <div class="sidebar">
             <div class="sidebar-header">
@@ -29,7 +32,9 @@
                     <fieldset>
                         <input required type="text" name="name" placeholder="Name">
                         <?php
+                            include 'functions.php';
                             $categories = ['Entertainment', 'Food', 'Transportation', 'Bills', 'Other'];
+                            $accounts = fetch_accounts($_SESSION['username']);
                             if(isset($_POST['transaction'])){
                                 echo "<select required name='category'>";
                                 foreach($categories as $category){
@@ -38,6 +43,11 @@
                                 echo "</select>";
                                 echo "<input required type='date' name='date'>";
                                 echo "<input required type='number' name='amount' step='0.01' placeholder='Amount'>";
+                                echo "<select required name='account'>";
+                                foreach($accounts as $account){
+                                    echo "<option value='$account'>$account</option>";
+                                }
+                                echo "</select>";
                                 echo "<input type='hidden' name='add_transaction'>";
                             }
                             if(isset($_POST['account'])){
