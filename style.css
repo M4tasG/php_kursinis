@@ -221,3 +221,32 @@ footer{
 .list-item-amount{
     color: var(--accent-color-secondary);
 }
+
+/* Change Form */
+.change-form fieldset{
+    border: none;
+}
+.change-form input{
+    margin: 1rem;
+    padding: 1rem;
+    border: 3px solid var(--accent-color);
+    width: 25%;
+    border-radius: 1rem;
+    background: white;
+    color: var(--text-color);
+}
+/* Change messages */
+.change-message{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.error{
+    border: 3px solid #ff0044;
+    background-color: #ff87a7;
+    color: #ff3068;
+}
+.success{
+    border: 3px solid #00ff00;
+    background-color: #87ff87;
+    color: #30ff30;
+}
