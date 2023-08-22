@@ -1,6 +1,8 @@
 # php_kursinis
- php kursinis darbas
+php kursinis darbas
 
+EN:
+A simple website written in PHP for University PHP course
 
 
 
